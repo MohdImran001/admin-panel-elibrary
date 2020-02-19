@@ -1,0 +1,40 @@
+<%- include('../partials/header.ejs') %>
+    <%- include('../partials/navbar.ejs') %>
+    <section class="content">
+        <h1 class="heading">Add Subject Content</h1>
+        <% if(error) { %>
+            <div class="error">
+                please reload the window or contact support 
+            </div>
+        <% } else { %>
+            
+            <p>Upload files ----- Status :- <span id="uploadStatus">none</span></p>
+            <input type="file" name="files" id="file-input" multiple>
+            <br><br>
+            <form action="/admin/add-subject-content" class="form" method="POST">
+                
+                <input type="hidden" value="" id="content" name="filesMetaData">
+                <select name="subjectID">
+                    <option> Select Subject </option>
+                    <% docs.forEach((doc) => {  %>
+                        <option value="<%= doc._id %>"><%= doc.title %></option>
+                    <% }) %>
+                </select>
+
+                <p>Select type of content</p>
+                <label for="ebooks"> Ebooks</label>
+                <input type="radio" name="contentType" value="ebooks">
+                <label for="enotes"> Enotes</label>
+                <input type="radio" name="contentType" value="enotes">
+                <label for="papers"> Previous Exam Papers</label>
+                <input type="radio" name="contentType" value="papers">
+
+                
+                
+                <button type="submit">submit</button>
+            </form>
+
+        <% } %>
+    </section>
+    <script src="/app.js"></script>
+<%- include('../partials/footer.ejs') %>

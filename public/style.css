@@ -1,0 +1,240 @@
+/* for flex reference:- https://tympanus.net/codrops/css_reference/flexbox/ */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: ubuntu;
+    color: #141823;
+}
+
+.wrapper {
+    min-height: 100%;
+    margin-bottom: 50px;
+}
+
+nav {
+    border-bottom: 0.2px solid #eee;
+    padding: 3rem 3rem 2rem 3rem;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+nav a {
+    display: block;
+    float: left;
+    text-decoration: none;
+    font-size: 18px;
+    color: #141823;
+}
+
+.right {
+    float: right;
+    margin-right: 5rem;
+}
+
+#logo {
+    font-weight: bolder;
+    font-size: 36px;
+    margin-top: -32px;
+}
+
+ul {
+    margin-left: -40px;
+}
+
+h1.heading {
+    /* margin-left: 3rem; */
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: #141823;
+}
+
+.content {
+    padding: 4rem;
+}
+
+.content > h1 > img {
+    vertical-align: middle;
+}
+
+/* .content > p{
+    margin-left: 3rem;
+} */
+
+.content > ul {
+    /* background-color: #eeeef0; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-gap: 2rem;
+    list-style: none;
+}
+
+.content > ul > li {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background: #ffffff;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+  ;
+}
+
+.subjectTitle {
+    margin-left: 4rem;
+    font-weight: bolder;
+    font-size: 3rem;
+    border-bottom: 3px solid #eee;
+    width: 90%;
+}
+
+.figure-content  {
+    text-align: center;
+    padding-bottom: 2px;
+}
+
+figure > figcaption {
+    text-transform: uppercase;
+}
+
+figure > figcaption > p {
+    margin-top: 2rem;
+}
+
+.download-button {
+    border: 1px solid #34b934;
+    color: #fff;
+    background-color: #34b934;
+    padding: 1rem 4rem 1rem 4rem;
+    border-radius: 5px;
+}
+
+.subtext {
+    color: #3b3b4f;
+}
+.content  > p {
+    font-size: 20px;
+}
+
+.no-content {
+    margin-left: 3rem;
+    font-size: 3rem;
+    color: grey;
+}
+
+.push {
+    height: 70px;
+}
+
+.footer {
+    width: 100%;
+    background-color: #eee;
+    height: 70px;
+    text-align: center;
+}
+
+.footer p {
+    margin: 20px;
+    padding-top: 20px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    body {
+        text-align: center;
+    }
+    .content {
+        padding: 1rem;
+    }
+    figure {
+        text-align: center;
+    }
+    .subjectTitle {
+        font-size: 12px;
+    }
+    h1.heading {
+        font-size: 1.5rem;
+    }
+    .footer {
+        height: 70px;
+    }
+    .footer p{
+        margin: 20px;
+        padding-top: 15px;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 800px) {
+    nav {
+        text-align: center;
+        padding: 0;
+        margin-top: 2.5rem;
+    }
+    nav a {
+        float: none;
+        padding: 0 1.5rem 1.5rem 1rem;
+        margin: 0;
+    }
+    .right {
+        float: none;
+        margin-right: 0;
+    }
+    #logo {
+        margin: 0;
+    }
+    .subjectTitle {
+        margin: 0 0 30px 0;
+        text-align: center;
+        font-size: 1.5rem;
+        width: 100%;
+        
+    }
+    figure {
+        text-align: center;
+    }
+    .no-content {
+      text-align: center;
+      margin-left: 0;
+      font-size: 1.5rem;
+      color: grey;
+    }
+
+}
+
+
+/*Mobile Content CSS*/
+.mobile-content h1 img{
+    vertical-align: middle;
+}
+
+.mobile-content ul{
+    list-style: none;
+}
+
+.mobile-content ul li{
+    border-top: 2px solid #eee;
+    border-bottom: 2px solid #eee;
+    padding-top: 10px;
+}
+
+.subject-name {
+    font-size: 20px;
+    font-weight: bold;
+}
