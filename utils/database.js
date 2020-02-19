@@ -1,7 +1,7 @@
 const mongodb = require('mongodb');
 const MongoClient = mongodb.MongoClient;
 
-const url = 'mongodb+srv://mohd_imran:SCsIUAWGThNkLYko@cluster0-ej1ez.mongodb.net/ebotes?retryWrites=true&w=majority';
+const url = 'mongodb+srv://USERNAME:PASSWORD@cluster0-ej1ez.mongodb.net/DATABASE_NAME?retryWrites=true&w=majority';
 let _db;
 
 const MongoConnect = (callback) => {
